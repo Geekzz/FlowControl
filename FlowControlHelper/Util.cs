@@ -4,6 +4,9 @@
     {
         public static string AskForString(string prompt)
         {
+            // denna funktion frågar efter en sträng från användaren
+            // och validerar att den inte är null eller tom (nullOrEmpty)
+
             string input;
             bool flag = true;
 
@@ -29,6 +32,9 @@
         }
         public static uint AskForInt(string prompt)
         {
+            // denna funktion frågar efter en uint (positivt heltal) från användaren
+            // och validerar genom uint.TryParse för att säkerställa att det är ett giltigt positivt heltal
+
             do
             {
                 string input = AskForString(prompt);
@@ -47,6 +53,8 @@
 
         public static int GetWordsCount(string sentence)
         {
+            // returnerar antalet ord i en mening
+
             return sentence.Split(' ').Length;
         }
     }

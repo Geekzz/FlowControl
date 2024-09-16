@@ -10,6 +10,7 @@ namespace FlowControlHelper
     {
         public static void DisplayMenu()
         {
+            // visar bara menyn, vad användaren kan välja etc
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Welcome to flow control program");
             Console.WriteLine("Here's some functions you can pick");
@@ -24,6 +25,8 @@ namespace FlowControlHelper
         // funktioner här nedan
         public static void PrintPriceByAge()
         {
+            // printa baserat på ålder, till exempel 80kr = ungdom pris
+
             uint price = GetPriceByAge();
             if (price == 80)
             {
@@ -44,6 +47,8 @@ namespace FlowControlHelper
         }
         public static uint GetPriceByAge()
         {
+            // returnera pris baserat på ålder
+
             uint age = Util.AskForInt("Enter age: ");
             if ( age < 20 )
             {
@@ -65,12 +70,14 @@ namespace FlowControlHelper
 
         public static uint GetTotalPrice()
         {
+            // returnerar totalpris baserat på ett antal personer som vill gå på bio
+
             uint number = Util.AskForInt("How many are you?: ");
             uint total_price = 0;
 
             for (int i = 0; i < number; i++)
             {
-                // reuse GetPriceByAge function
+                // återanvända getpriceage funktion
                 total_price += GetPriceByAge();
             }
 
@@ -79,6 +86,7 @@ namespace FlowControlHelper
 
         public static void RepeatTenTimes()
         {
+            // användaren kan skriva vad som helst här, och programmet skriver ut variabeln tio gånger via for loop
             string input = Util.AskForString("Enter anything: ");
             for (int i = 0; i < 10; i++)
             {
@@ -88,6 +96,9 @@ namespace FlowControlHelper
 
         public static string GetThirdWord()
         {
+            // användaren skriver en mening (minst 3 ord lång) och programmet hämtar ut det tredje ordet
+            // nu har jag implementerat något extra, programmet frågar efter ett nummer för att hämta ut ett ord från meningen
+
             string input;
 
             do

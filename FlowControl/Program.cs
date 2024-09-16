@@ -6,6 +6,11 @@ namespace FlowControl
     {
         static void Main(string[] args)
         {
+            // main program, det är här programmet startar
+            // flag håller programmet i en loop tills användaren trycker 0
+            // input lagrar användarens val från menyn
+            // price används för att skriva ut den totala priset beroende på vilken funktion som anropas
+
             bool flag = true;
             string input;
             uint price;
